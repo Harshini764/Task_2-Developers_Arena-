@@ -1,0 +1,273 @@
+===========================================================
+  TEST CASES — Grade Calculator (grade_calculator.py)
+  Week 2 | Python Basics | Developers Arena
+===========================================================
+
+Instructions:
+  Run the program:  python grade_calculator.py
+  Enter the inputs listed for each test case below.
+  Compare the actual output with the expected output.
+  Mark each test as PASS or FAIL.
+
+Output Format:
+  📊 RESULT FOR <NAME>:
+  Marks: <marks>/100
+  Grade: <letter>
+  Message: <remark>
+
+-----------------------------------------------------------
+TEST CASE 1: A-Range Score
+-----------------------------------------------------------
+Input:
+  Enter student name : Priya
+  Enter marks        : 95
+
+Expected Output:
+  📊 RESULT FOR PRIYA:
+  Marks: 95/100
+  Grade: A
+  Message: Excellent! Outstanding performance! 🌟
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 2: B-Range Score
+-----------------------------------------------------------
+Input:
+  Enter student name : Priya
+  Enter marks        : 85
+
+Expected Output:
+  📊 RESULT FOR PRIYA:
+  Marks: 85/100
+  Grade: B
+  Message: Very Good! Keep it up! 👍
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 3: C-Range Score
+-----------------------------------------------------------
+Input:
+  Enter student name : Alex
+  Enter marks        : 75
+
+Expected Output:
+  📊 RESULT FOR ALEX:
+  Marks: 75/100
+  Grade: C
+  Message: Good! Room for improvement. 😊
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 4: D-Range Score
+-----------------------------------------------------------
+Input:
+  Enter student name : Sam
+  Enter marks        : 65
+
+Expected Output:
+  📊 RESULT FOR SAM:
+  Marks: 65/100
+  Grade: D
+  Message: Satisfactory. Study harder! 📚
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 5: Failing Score (Grade F)
+-----------------------------------------------------------
+Input:
+  Enter student name : John
+  Enter marks        : 45
+
+Expected Output:
+  📊 RESULT FOR JOHN:
+  Marks: 45/100
+  Grade: F
+  Message: Failed. Don't give up! 💪
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 6: Boundary — Exactly 90 (A/B boundary)
+-----------------------------------------------------------
+Input:
+  Enter student name : Riya
+  Enter marks        : 90
+
+Expected Output:
+  📊 RESULT FOR RIYA:
+  Marks: 90/100
+  Grade: A
+  Message: Excellent! Outstanding performance! 🌟
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 7: Boundary — Exactly 80 (B/C boundary)
+-----------------------------------------------------------
+Input:
+  Enter student name : Riya
+  Enter marks        : 80
+
+Expected Output:
+  📊 RESULT FOR RIYA:
+  Marks: 80/100
+  Grade: B
+  Message: Very Good! Keep it up! 👍
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 8: Boundary — Exactly 70 (C/D boundary)
+-----------------------------------------------------------
+Input:
+  Enter student name : Riya
+  Enter marks        : 70
+
+Expected Output:
+  📊 RESULT FOR RIYA:
+  Marks: 70/100
+  Grade: C
+  Message: Good! Room for improvement. 😊
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 9: Boundary — Exactly 60 (D/F boundary)
+-----------------------------------------------------------
+Input:
+  Enter student name : Riya
+  Enter marks        : 60
+
+Expected Output:
+  📊 RESULT FOR RIYA:
+  Marks: 60/100
+  Grade: D
+  Message: Satisfactory. Study harder! 📚
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 10: Perfect Score (100)
+-----------------------------------------------------------
+Input:
+  Enter student name : Meera
+  Enter marks        : 100
+
+Expected Output:
+  📊 RESULT FOR MEERA:
+  Marks: 100/100
+  Grade: A
+  Message: Excellent! Outstanding performance! 🌟
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 11: Zero Score (0)
+-----------------------------------------------------------
+Input:
+  Enter student name : Meera
+  Enter marks        : 0
+
+Expected Output:
+  📊 RESULT FOR MEERA:
+  Marks: 0/100
+  Grade: F
+  Message: Failed. Don't give up! 💪
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 12: Invalid Input — Text String
+-----------------------------------------------------------
+Description : User types text; program should warn and
+              re-prompt without crashing
+Input:
+  Enter student name : Priya
+  Enter marks        : hello   (invalid — first attempt)
+  Enter marks        : 80      (valid — second attempt)
+
+Expected Behavior:
+  After "hello":
+    "⚠️  Invalid input. Please enter a number."
+  Program re-prompts then continues normally.
+
+Expected Output:
+  📊 RESULT FOR PRIYA:
+  Marks: 80/100
+  Grade: B
+  Message: Very Good! Keep it up! 👍
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 13: Invalid Input — Score Above 100
+-----------------------------------------------------------
+Input:
+  Enter student name : Priya
+  Enter marks        : 150     (invalid — out of range)
+  Enter marks        : 88      (valid)
+
+Expected Behavior:
+  After 150:
+    "⚠️  Marks must be between 0 and 100. Try again."
+
+Expected Output:
+  📊 RESULT FOR PRIYA:
+  Marks: 88/100
+  Grade: B
+  Message: Very Good! Keep it up! 👍
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+TEST CASE 14: Invalid Input — Negative Score
+-----------------------------------------------------------
+Input:
+  Enter student name : Priya
+  Enter marks        : -10     (invalid — out of range)
+  Enter marks        : 55      (valid)
+
+Expected Behavior:
+  After -10:
+    "⚠️  Marks must be between 0 and 100. Try again."
+
+Expected Output:
+  📊 RESULT FOR PRIYA:
+  Marks: 55/100
+  Grade: F
+  Message: Failed. Don't give up! 💪
+
+Result: [ PASS / FAIL ]
+
+-----------------------------------------------------------
+SUMMARY TABLE
+-----------------------------------------------------------
+| TC# | Name  | Marks | Expected Grade | Result |
+|-----|-------|-------|----------------|--------|
+|  1  | Priya |  95   | A              |        |
+|  2  | Priya |  85   | B              |        |
+|  3  | Alex  |  75   | C              |        |
+|  4  | Sam   |  65   | D              |        |
+|  5  | John  |  45   | F              |        |
+|  6  | Riya  |  90   | A (boundary)   |        |
+|  7  | Riya  |  80   | B (boundary)   |        |
+|  8  | Riya  |  70   | C (boundary)   |        |
+|  9  | Riya  |  60   | D (boundary)   |        |
+| 10  | Meera | 100   | A (perfect)    |        |
+| 11  | Meera |   0   | F (zero)       |        |
+| 12  | Priya | hello | Reprompts → B  |        |
+| 13  | Priya | 150   | Reprompts → B  |        |
+| 14  | Priya | -10   | Reprompts → F  |        |
+
+Total Tests : 14
+Passed      : ___
+Failed      : ___
+
+===========================================================
+  Tester Name : ______________________________
+  Date        : ______________________________
+===========================================================
